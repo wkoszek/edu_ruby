@@ -10,13 +10,16 @@ class Thing
 	def initialize(options = {})
 		@name = options[:name] || "unknown"
 	end
+
 	def to_s
-		"> #{@name}"
+		"to_s:#{@name}"
 	end
 	def to_a
-		[@name]
+		["to_a:#{@name}"]
 	end
-	alias_method :to_ary, :to_a
+	def to_ary
+		["to_ary:#{@name}"]
+	end
 
 	def method_missing(method_name)
 		puts "> Missing method: #{method_name}"
@@ -24,8 +27,9 @@ class Thing
 	end
 end
 
-t = Thing.new(name: "wojtek")
+t = Thing.new({ name: "wojtek" } )
 puts t
+print t, "\n"
 #t.dupa
 
 #-----------------------------------------------------------------------------

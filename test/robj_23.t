@@ -1,5 +1,6 @@
 --------------------------------------
-wojtek
+to_ary:wojtek
+to_s:wojtek
 -----------------How include? works---------------------
 Callling include?(2) on a = 
 1
