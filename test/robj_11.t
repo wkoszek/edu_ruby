@@ -1,0 +1,12 @@
+-----------------how to fork?---------------------
+<PID> child something
+S> Send 0
+S> Send 1
+S> Send 2
+S> Send 3
+S> Send 4
+S> Send 5
+S> Send 6
+S> Send 7
+S> Send 8
+S> Send 9
