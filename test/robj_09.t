@@ -1,4 +1,3 @@
-###### Warn: size > 10000!
 -----------------just check what :<something> does---------------------
 > red
 > green
@@ -10,5 +9,6 @@
 -- This is original talk() --
 -----------------Just check what &does---------------------
 Size: 15000
+###### Warn: size > 10000!
 -----------------understanding *args---------------------
 Arg: 1

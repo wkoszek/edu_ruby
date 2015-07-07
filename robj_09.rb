@@ -2,6 +2,9 @@
 
 require './ruler'
 
+STDOUT.sync = true
+STDERR.sync = true
+
 #-----------------------------------------------------------------------------
 R("just check what :<something> does");
 def ex_class()
@@ -42,7 +45,6 @@ class Array
 		puts "Size: #{size}"
 		if size > 10000
 			$stderr.puts "###### Warn: size > 10000!"
-			$stderr.flush
 		end
 		oldsort(&block)
 	end
