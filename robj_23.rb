@@ -11,7 +11,7 @@ class Thing
 		@name = options[:name] || "unknown"
 	end
 	def to_s
-		"> @name"
+		"> #{@name}"
 	end
 	def to_a
 		[@name]
