@@ -1,13 +1,18 @@
 #!/usr/bin/env ruby
 
 require "./ruler"
+testing = 1
 
 #-----------------------------------------------------------------------------
 R("")
 
 a = []
 for i in (0..10) do
-	a.push((Random.rand() * 100).to_i)
+	val = (Random.rand() * 100).to_i
+	if testing then
+		val = i
+	end
+	a.push(i)
 end
 
 a.each do |av|

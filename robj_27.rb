@@ -19,7 +19,7 @@ class Library
   end
  
   def method_missing(name, *args)
-    puts "-- Library: #{self} --"
+    puts "-- Library --"
     puts "-- here, name='#{name}'"
     unless SYSTEMS.include?(name.to_s)
 	super

@@ -44,12 +44,12 @@ class Box
 end
 
 b0 = Box.new
-p b0
+#p b0
 b0.width = 1
 b0.height = 2
 b0.length = 3
-p b0
+#p b0
 p "Vol: #{b0.volume}"
 b0.serialize("data_robj06.txt")
 b1 = b0.unser("data_robj06.txt")
-p b1
+#p b1

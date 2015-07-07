@@ -15,6 +15,9 @@ class Card
 		self.suit = s
 		self.rank = r
 	end
+	def inspect
+		"CARD(suit: #{self.suit} rank: #{self.rank})"
+	end
 end
 
 # The fact that Deck inherits after Array makes it get an access to Array's
@@ -23,21 +26,30 @@ class Deck < Array
 	include CardData
 
 	attr_reader :shuffled
+	attr_writer :testing
 
 	def initialize
 		puts "-- Deck --"
 		@@suits.each do |s|
 			@@ranks.each do |r|
 				puts "=== s=#{s} r=#{r}"
-				push Card.new(r, s)
+				push Card.new(s, r)
 			end
 		end
 		@shuffled = false
 	end
 
+	def testing_start
+		@testing = 1
+	end
+
 	def shuffle!
 		size.downto(1) do |n|
-			push delete_at rand(n)
+			pos = rand(n)
+			if @testing then
+				pos = 1
+			end
+			push delete_at pos
 		end
 		@shuffled = true
 	end
@@ -55,6 +67,7 @@ class Deck < Array
 end
 
 d = Deck.new
+d.testing_start
 hand = d.deal(5)
 p hand
 d.shuffle!

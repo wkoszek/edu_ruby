@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require "./ruler"
+testing = 1
 
 #-----------------------------------------------------------------------------
 R("")
@@ -14,7 +15,12 @@ def sample_when(x)
 	end
 end
 
-r = (Random.rand() * 100) % 4
+val = (Random.rand() * 100) % 4
+if testing then
+	val = 123
+end
+
+r = val
 r = r.round(0)
 
 sample_when(r)
