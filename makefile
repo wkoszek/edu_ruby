@@ -6,7 +6,7 @@ TESTDATA:=$(SRCS:.rb=.t)
 all:	prepare $(OBJECTS) test
 
 %.o: %.rb
-	ruby $< > test/$@ 2>&1
+	ruby $< 2>&1 | grep -v '#REM' > test/$@
 
 %.t: %.o
 	@echo "#--- comparing $< (no output on OK match) ---"

@@ -27,7 +27,7 @@ end
 R("Create an object of Thing class and list its methods")
 t0 = Thing.new
 t0.methods.sort.each do |m|
-	print "#{m} "
+	print "#REM #{m} "
 end
 puts 
 
