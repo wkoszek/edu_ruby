@@ -30,9 +30,9 @@ class Image
 		"# Image name: #{@name}, x:#{@x}, y:#{@y}"
 	end
 
-	def move_xy(_x, _y)
-		@x, @y = _x, _y
-		puts "# Moved to #{_x} and #{_y}"
+	def move_xy(xx, yy)
+		@x, @y = xx, yy
+		puts "# Moved to #{@x} and #{@y}"
 	end
 end
 

@@ -7,8 +7,8 @@ R("Showing how to handle to_s of the inherited class")
 class Obj
 	attr_accessor :x, :y
 
-	def initialize(_x, _y)
-		@x, @y = _x, _y
+	def initialize(xx, yy)
+		@x, @y = xx, yy
 	end
 
 	def to_s
@@ -18,8 +18,8 @@ end
 class Planet < Obj
 	attr_accessor :color
 
-	def initialize(_x, _y, _color)
-		super(_x, _y)
+	def initialize(xx, yy, _color)
+		super(xx, yy)
 		@color = _color
 	end
 
