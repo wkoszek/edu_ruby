@@ -34,3 +34,8 @@ found a problem with [Rubinius](https://github.com/rubinius/rubinius/)
 interpreter:
 
 	https://github.com/rubinius/rubinius/issues/3456
+
+# Author
+
+- Wojciech Adam Koszek, [wojciech@koszek.com](mailto:wojciech@koszek.com)
+- [http://www.koszek.com](http://www.koszek.com)
